@@ -41,3 +41,20 @@ console.log(
   "contains duplicate elements",
   checkDuplicateOp([, 1, 1, 3, 3, 4, 3, 2, 4, 2])
 );
+
+// O(n)
+// using set
+const checkDuplicateUsingSet = (nums = []) => {
+  const seenSet = new Set();
+  for (const element of nums) {
+    if (seenSet.has(element)) {
+      // found the duplicate element
+      return true;
+    }
+    seenSet.add(element);
+  }
+
+  return false;
+};
+
+console.log(checkDuplicateUsingSet([1, 2, 3, 1]));
