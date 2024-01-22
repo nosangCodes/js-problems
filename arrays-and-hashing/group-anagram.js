@@ -14,7 +14,7 @@
 // Input: strs = ["a"]
 // Output: [["a"]]
 
-// O(n)
+// O(n log * n)
 const groupAnagram = (words = []) => {
   // sort each word from the words array
   const sortedWords = words.map((word) => word.split("").sort().join(""));
