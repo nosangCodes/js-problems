@@ -10,6 +10,7 @@
 
 // O(n log * n)
 const getTopKFrequentElements = (nums = [], k) => {
+  nums = [1,2,1,1,2,2,]
   let hash = {};
   for (const el of nums) {
     hash[el] = (hash[el] || 0) + 1;
